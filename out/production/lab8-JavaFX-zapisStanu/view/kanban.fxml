@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="paneid" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="581.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.KanbanController">
+   <children>
+      <MenuBar layoutY="-2.0" prefHeight="32.0" prefWidth="581.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="connectButton" mnemonicParsing="false" onAction="#closeMenuItem" text="Close" />
+                  <MenuItem mnemonicParsing="false" onAction="#saveToBinFile" text="Save" />
+                  <MenuItem mnemonicParsing="false" onAction="#openMenuItem" text="Open" />
+                  <MenuItem mnemonicParsing="false" onAction="#importMenuItem" text="Import" />
+                  <MenuItem mnemonicParsing="false" onAction="#exportMenuItem" text="Export" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="About">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#informationMenuItem" text="Information" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button layoutX="176.0" layoutY="325.0" mnemonicParsing="false" onAction="#newTaskButton" prefHeight="31.0" prefWidth="231.0" style="-fx-background-color: STEELBLUE;" text="Add new task" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Button>
+      <VBox fx:id="toDoPane" layoutX="24.0" layoutY="80.0" prefHeight="200.0" prefWidth="161.0" style="-fx-background-color: #66CCFF;">
+         <children>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="161.0" style="-fx-background-color: DODGERBLUE;" text="TO DO">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <ListView fx:id="firstList" prefHeight="171.0" prefWidth="161.0" />
+         </children>
+      </VBox>
+      <VBox layoutX="212.0" layoutY="80.0" prefHeight="200.0" prefWidth="161.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="161.0" style="-fx-background-color: SPRINGGREEN;" text="IN PROGRESS">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <ListView fx:id="secondList" prefHeight="171.0" prefWidth="161.0" />
+         </children>
+      </VBox>
+      <VBox layoutX="398.0" layoutY="80.0" prefHeight="200.0" prefWidth="161.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="161.0" style="-fx-background-color: ORANGE;" text="DONE">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <ListView fx:id="thirdList" prefHeight="171.0" prefWidth="161.0" />
+         </children>
+      </VBox>
+   </children>
+</Pane>
