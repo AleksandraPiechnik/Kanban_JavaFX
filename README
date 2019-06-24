@@ -1,0 +1,8 @@
+Basic Kanban application with GUI in JavaFX , using serialization. Designed for planning tasks.
+User can add new task. Task can be in 3 tables: to do, in progress and done task. Task can have priority which shows cell color. 
+Each task can be edited, deleted or user can move it to another table. After hovering over an element from the list, Tooltip containing 
+the task description is displayed.
+
+User can save/open serialized file or import/export to csv file. By FileChooser and ExtensionFilter user is asked about save/load place.
+
+If program doesn’t work, make sure kanban.fxml file is in out/production/lab8-JavaFX-zapisStanu/view directory. If not copy fxml file in it.
